@@ -88,13 +88,6 @@ typedef enum
  */
 void setOSMode(eADSOSMode_t osmode);
 
-/*
- * @brief Gets the Operational status/single-shot conversion start
- * @return result:
- *     eADSOSMode_t
- */
-eADSOSMode_t getOSMode();
-
 typedef enum
 {
     eCOMPMODE_TRAD       = DFROBOT_ADS1115_COMP_MODE_TRAD,
@@ -118,14 +111,6 @@ typedef enum
  */
 void setCompPol(eADSCompPol_t comppol);
 
-/*
- * @brief Gets the Comparator polarity
- *
- * @return result:
- *     eADSCompPol_t
- */
-eADSCompPol_t getCompPol();
-
 typedef enum
 {
     eCOMPLAT_NONLAT      = DFROBOT_ADS1115_COMP_LAT_NONLAT,
@@ -138,14 +123,6 @@ typedef enum
  *        and lower threshold values
  */
 void setCompLat(eADSCompLat_t complat);
-
-/*
- * @brief Gets the Latching comparator
- *
- * @return result:
- *     eADSCompLat_t
- */
-eADSCompLat_t getCompLat();
 
 typedef enum
 {
@@ -162,14 +139,6 @@ typedef enum
           or lower thresholds required before asserting the ALERT/RDY pin.
  */
 void setCompQue(eADSCompQue_t compque);
-
-/*
- * @brief Gets the Comparator queue and disable
- *
- * @return result:
- *     eADSCompQue_t
- */
-eADSCompQue_t getCompQue();
 
 /*
  * @brief Sets the low threshold value
