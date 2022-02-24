@@ -236,7 +236,7 @@ class ADS1115():
 		time.sleep(0.1)
 		return self.read_value()
 
-	def comparatorVoltage(self,channel):
+	def comparator_voltage(self,channel):
 		'''!
 		  @brief Sets up the comparator causing the ALERT/RDY pin to assert .
 		  @param channel  the Channel: 0-3

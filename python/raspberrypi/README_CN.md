@@ -123,7 +123,7 @@ python2 demo_read_voltage.py
     @n    3 : AINP = AIN2 and AINN = AIN3
     @return 电压值
   '''
-  def comparatorVoltage(self,channel):
+  def comparator_voltage(self,channel):
 ```
 
 ## 兼容性
