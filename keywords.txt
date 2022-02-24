@@ -64,7 +64,7 @@ ads_i2cAddress	KEYWORD2
 setHighThreshold	KEYWORD2
 init	KEYWORD2
 Comparator_Differential	KEYWORD2
-ComparatorVoltage	KEYWORD2
+comparatorVoltage	KEYWORD2
 readVoltage	KEYWORD2
 Measure_Differential	KEYWORD2
 Measure_SingleEnded	KEYWORD2

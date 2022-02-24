@@ -1,3 +1,15 @@
+'''!
+  @file demo_read_voltage.py
+  @brief connect ADS1115 I2C interface with your board (please reference board compatibility)
+  @n  The voltage value read by A0 A1 A2 A3 is printed through the serial port.
+  @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+  @license     The MIT License (MIT)
+  @author [luoyufeng](yufeng.luo@dfrobot.com)
+  @version  V1.0
+  @date  2019-06-19
+  @url https://github.com/DFRobot/DFRobot_ADS1115
+'''
+
 import sys
 sys.path.append('../')
 import time
@@ -12,15 +24,15 @@ ads1115 = ADS1115()
 
 while True :
     #Set the IIC address
-    ads1115.setAddr_ADS1115(0x48)
+    ads1115.set_addr_ADS1115(0x48)
     #Sets the gain and input voltage range.
-    ads1115.setGain(ADS1115_REG_CONFIG_PGA_6_144V)
+    ads1115.set_gain(ADS1115_REG_CONFIG_PGA_6_144V)
     #Get the Digital Value of Analog of selected channel
-    adc0 = ads1115.readVoltage(0)
+    adc0 = ads1115.read_voltage(0)
     time.sleep(0.2)
-    adc1 = ads1115.readVoltage(1)
+    adc1 = ads1115.read_voltage(1)
     time.sleep(0.2)
-    adc2 = ads1115.readVoltage(2)
+    adc2 = ads1115.read_voltage(2)
     time.sleep(0.2)
-    adc3 = ads1115.readVoltage(3)
+    adc3 = ads1115.read_voltage(3)
     print "A0:%dmV A1:%dmV A2:%dmV A3:%dmV"%(adc0['r'],adc1['r'],adc2['r'],adc3['r'])

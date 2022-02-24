@@ -1,3 +1,14 @@
+/*!
+ * @file DFRobot_ADS1115.cpp
+ * @brief Provides an Arduino library to read ADS1115 data over I2C. Use this library to read analog voltage values.
+ *
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [luoyufeng](yufeng.luo@dfrobot.com),
+ * @version  V1.0
+ * @date  2019-06-19
+ * @url https://github.com/DFRobot/DFRobot_ADS1115
+ */
 #include "Arduino.h"
 #include <Wire.h>
 #include <math.h>

@@ -1,3 +1,15 @@
+'''!
+  @file demo_comparator_voltage.py
+  @brief connect ADS1115 I2C interface with your board (please reference board compatibility)
+  @n  Through the serial port to see the voltage difference between the two channels.
+  @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+  @license     The MIT License (MIT)
+  @author [luoyufeng](yufeng.luo@dfrobot.com)
+  @version  V1.0
+  @date  2019-06-19
+  @url https://github.com/DFRobot/DFRobot_ADS1115
+'''
+
 import sys
 sys.path.append('../')
 import time
@@ -13,9 +25,9 @@ ads1115 = ADS1115()
 
 while True :
     #Set the IIC address
-    ads1115.setAddr_ADS1115(0x48)
+    ads1115.set_addr_ADS1115(0x48)
     #Sets the gain and input voltage range.
-    ads1115.setGain(ADS1115_REG_CONFIG_PGA_6_144V)
+    ads1115.set_gain(ADS1115_REG_CONFIG_PGA_6_144V)
     time.sleep(0.8)
     #Get the voltage difference between two channels
     adc = ads1115.ComparatorVoltage(0)

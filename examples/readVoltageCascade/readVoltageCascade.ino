@@ -1,17 +1,14 @@
-/*
- * file ADS1115_ReadVoltage_cascade.ino
+/*!
+ * @file readVoltageCascade.ino
+ * @brief Cascade two ADS1115s to your board and choose different I2C address(please reference board compatibility)
+ * @n The voltage value read by A0 A1 A2 A3 is printed through the serial port.
  *
- * @ https://github.com/DFRobot/DFRobot_ADS1115
- *
- * Cascade two ADS1115s to your board and choose different I2C address(please reference board compatibility)
- *
- * The voltage value read by A0 A1 A2 A3 is printed through the serial port.
- *
- * Copyright   [DFRobot](http://www.dfrobot.com), 2016
- * Copyright   GNU Lesser General Public License
- *
- * version  V1.0
- * date  2018-01-21
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [luoyufeng](yufeng.luo@dfrobot.com),
+ * @version  V1.0
+ * @date  2019-06-19
+ * @url https://github.com/DFRobot/DFRobot_ADS1115
  */
 
 #include <Wire.h>

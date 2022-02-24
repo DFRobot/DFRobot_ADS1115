@@ -1,17 +1,14 @@
-/*
- * file ADS1115_ComparatorVoltage.ino
+/*!
+ * @file comparatorVoltage.ino
+ * @brief connect ADS1115 I2C interface with your board (please reference board compatibility)
+ * @n Through the serial port to see the voltage difference between the two channels.
  *
- * @ https://github.com/DFRobot/DFRobot_ADS1115
- *
- * connect ADS1115 I2C interface with your board (please reference board compatibility)
- *
- * Through the serial port to see the voltage difference between the two channels.
- *
- * Copyright   [DFRobot](http://www.dfrobot.com), 2016
- * Copyright   GNU Lesser General Public License
- *
- * version  V1.0
- * date  2018-01-21
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT License (MIT)
+ * @author [luoyufeng](yufeng.luo@dfrobot.com),
+ * @version  V1.0
+ * @date  2019-06-19
+ * @url https://github.com/DFRobot/DFRobot_ADS1115
  */
 
 #include <Wire.h>
@@ -45,19 +42,19 @@ void loop(void)
         int16_t result01, result03, result13, result23;
         Serial.println("Get the voltage difference between two channels");
         Serial.println(" ");
-        result01 = ads.ComparatorVoltage(01);
+        result01 = ads.comparatorVoltage(01);
         Serial.print("The voltage difference between A0 and A1 ");
         Serial.print(result01);
         Serial.println("mV");
-        result03 = ads.ComparatorVoltage(03);
+        result03 = ads.comparatorVoltage(03);
         Serial.print("The voltage difference between A0 and A3 ");
         Serial.print(result03);
         Serial.println("mV");
-        result13 = ads.ComparatorVoltage(13);
+        result13 = ads.comparatorVoltage(13);
         Serial.print("The voltage difference between A1 and A3 ");
         Serial.print(result13);
         Serial.println("mV");
-        result23 = ads.ComparatorVoltage(23);
+        result23 = ads.comparatorVoltage(23);
         Serial.print("The voltage difference between A2 and A3 ");
         Serial.print(result23);
         Serial.println("mV ");
