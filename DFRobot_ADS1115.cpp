@@ -201,8 +201,8 @@ uint16_t DFRobot_ADS1115::readVoltage(uint8_t channel)
     else if (channel == 3)
         setMux(eADSMUX_8);
     // Wait for the conversion to complete
-    uint16_t config;
-    config = readAdsReg(ads_i2cAddress, DFROBOT_ADS1115_POINTER_CONFIG);
+
+    uint16_t config = readAdsReg(ads_i2cAddress, DFROBOT_ADS1115_POINTER_CONFIG);
     delay(ads_conversionDelay);
     // Read the conversion results
     // 16-bit unsigned results for the ADS1115
@@ -217,7 +217,7 @@ uint16_t DFRobot_ADS1115::readVoltage(uint8_t channel)
  *ADC is Differential input channel
  */
 /**************************************************************************/
-int16_t DFRobot_ADS1115::ComparatorVoltage(uint8_t channel)
+int16_t DFRobot_ADS1115::comparatorVoltage(uint8_t channel)
 {
     // Start with default values
     uint16_t config;
