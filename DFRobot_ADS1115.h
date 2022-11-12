@@ -9,6 +9,9 @@
  * @date  2019-06-19
  * @url https://github.com/DFRobot/DFRobot_ADS1115
  */
+#ifndef DFROBOT_ADS1115_H
+#define DFROBOT_ADS1115_H
+
 #include "Arduino.h"
 
 #include <Wire.h>
@@ -353,3 +356,4 @@ public:
   int16_t   getHighThreshold();
 };
 
+#endif
