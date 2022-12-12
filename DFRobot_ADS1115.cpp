@@ -30,16 +30,15 @@ void DFRobot_ADS1115::setAddr_ADS1115(uint8_t i2cAddress)
  */
 void DFRobot_ADS1115::init()
 {
-  Wire.begin();
+  _pWire->begin();
 }
 
 
 bool DFRobot_ADS1115::checkADS1115()
 {
     uint8_t error;
-    ads_i2cAddress;
-    Wire.beginTransmission(ads_i2cAddress);
-    error = Wire.endTransmission();
+    _pWire->beginTransmission(ads_i2cAddress);
+    error = _pWire.endTransmission();
     if(error == 0){
         return true;
     }else{
